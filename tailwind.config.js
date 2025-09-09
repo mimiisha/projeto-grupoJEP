@@ -15,6 +15,7 @@ export default {
         secondaryButton: "#94A3B8",
         hoverSB: "#8493A7",
         principalText: "#000000",
+        titleText: "#2B66A7",
         details: "#FBBF24",
         hoverDetail: "#D5A21D",
       },

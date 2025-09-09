@@ -1,60 +1,48 @@
-import React from "react"
-import homeImage from "../imgs/homeImage.png"
-import { DownloadSimpleIcon, CodeIcon } from "@phosphor-icons/react"
-import TypeWriter from "../components/TypeWriter"
+import React from "react";
+import home from "../imgs/home.png";
+import projep from "../imgs/projep.png";
 
 const Home = () => {
-    return (
-        <div className="flex flex-col min-h-screen bg-backgound">
-            <div className="grid grid-cols-1 md:grid-cols-3 flex-1 h-auto md:h-[calc(100vh-80px)]">
-                <div className="my-10 mx-8 md:mx-16 flex flex-col gap-4 md:col-span-2 text-principalText">
-                    <h1 className="font-medium text-3xl sm:text-4xl">Olá, eu sou a Misha!</h1>
-                    <h2 className="font-bold text-5xl sm:text-6xl">
-                        <TypeWriter
-                            textPart1="WEB "
-                            textPart2="DEVELOPER"
-                            speed={150}
-                        />
-                    </h2>
-                    <p className="text-lg sm:text-xl md:w-[800px]">
-                        Aqui você encontra meus projetos acadêmicos e pessoais, desenvolvidos para implementar e consolidar meus conhecimentos técnicos.<br />
-                        Sinta-se à vontade para explorar, conhecer meu processo criativo e ver como tecnologia e criatividade se unem no meu trabalho.
-                    </p>
-
-                    <div className="flex flex-row gap-4">
-                        <a
-                            href="https://github.com/mimiisha"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex justify-center items-center mt-8 h-auto w-64 text-white rounded-full px-4 py-2 bg-secondaryButton hover:bg-hoverSB transition-all duration-300 font-semibold text-xs md:text-base"
-                        >
-                            Projetos <CodeIcon className="text-white w-4 h-4 md:w-5 md:h-5 ml-2" weight="bold" />
-                        </a>
-                        <a
-                            href="/curriculoMisha.pdf"
-                            download
-                            className="flex justify-center items-center gap-4 mt-8 h-auto w-64 text-white rounded-full px-4 py-2 bg-primaryButton hover:bg-hoverPB transition-all duration-300 font-semibold text-xs md:text-base"
-                        >
-                            Meu currículo <DownloadSimpleIcon className="text-white w-4 h-4 md:w-5 md:h-5" weight="bold" />
-                        </a>
-                    </div>
-                    <img
-                        src={homeImage}
-                        alt="Ícone"
-                        className="block lg:hidden my-10 w-[400px] mx-auto animate-bounce-slow"
-                    />
-                </div>
-
-                <div className="hidden lg:block col-span-1  mr-8">
-                    <img
-                        src={homeImage}
-                        alt="Ícone"
-                        className="w-full h-full object-contain animate-bounce-slow"
-                    />
-                </div>
-            </div>
+  return (
+    <div className="flex flex-col min-h-screen bg-backgound">
+      <img src={home} alt="home" className="w-full h-96 object-cover" />
+      <div className="px-6 md:px-12 mt-4">
+        <h1 className="text-3xl font-semibold text-titleText">
+          Confira nossos serviços e soluções:
+        </h1>
+        <div className="overflow-x-auto">
+          <ul className="mt-4 space-y-2 text-principalText flex flex-row text-center">
+            <li className="px-4">Desenvolvimento de Software Personalizado</li>
+            <li className="px-4">Consultoria em Transformação Digital</li>
+            <li className="px-4">Integração de Sistemas</li>
+            <li className="px-4">Automação de Processos</li>
+            <li className="px-4">Desenvolvimento de Aplicações Móveis</li>
+            <li className="px-4">Serviços de Nuvem e Infraestrutura</li>
+            <li className="px-4">Análise e Visualização de Dados</li>
+            <li className="px-4">Suporte e Manutenção de TI</li>
+          </ul>
         </div>
-    )
-}
+        <img
+          src={projep}
+          alt="projep"
+          className="py-10 px-24 lg:px-96 w-auto h-auto object-cover"
+        />
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.70142303836508!2d-46.69804108571693!3d-23.488484316264522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef9b18f13d50f%3A0x58724b3121d68d80!2sGrupo%20JEP%20Terceiriza%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1757439846617!5m2!1spt-BR!2sbr"
+        width="600"
+        height="450"
+        style={{
+          border: 0,
+          width: "100%",
+          height: "350px",
+        }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
